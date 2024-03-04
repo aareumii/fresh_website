@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>😀fresh😀</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/swiper/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="../css/slick/slick.css" />
+		<link rel="stylesheet" href="../css/slick/slick-theme.css" />
+		<link rel="stylesheet" href="css/font.css" />
+		<link rel="stylesheet" href="css/fresh.css" />
+		<link rel="stylesheet" href="css/fresh_header.css" />
+		<link rel="stylesheet" href="css/fresh_main_slide.css" />
+		<link rel="stylesheet" href="css/fresh_section.css" />
+		<link rel="stylesheet" href="css/fresh_footer.css" />
+
+		<!-- Slick CSS -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+		/>
+		<!-- Slick Theme CSS -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+		/>
+
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<!-- Slick JS -->
+		<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		<script src="../js/swiper/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" href="../css/swiper/swiper-bundle.min.css" />
+		<!-- Swiper CSS -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper/swiper-bundle.min.css"
+		/>
+
+		<!-- Swiper JS -->
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<h1>fresh</h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="#">New</a>
+					</li>
+					<li>
+						<a href="#">Best</a>
+					</li>
+					<li>
+						<a href="#">Category</a>
+						<ul class="menu_list">
+							<li>
+								<a href="#">SkiNCare</a>
+							</li>
+							<li>
+								<a href="#">LipCare</a>
+							</li>
+							<li>
+								<a href="#">BodyCare</a>
+							</li>
+							<li>
+								<a href="#">Fragrance</a>
+							</li>
+							<li>
+								<a href="#">Gifting</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">collecion</a>
+						<ul class="menu_list">
+							<li>
+								<a href="#">Black Tea</a>
+							</li>
+							<li>
+								<a href="#">Crème Ancienne</a>
+							</li>
+							<li>
+								<a href="#">Kombucha</a>
+							</li>
+							<li>
+								<a href="#">Lotus</a>
+							</li>
+							<li>
+								<a href="#">Rose</a>
+							</li>
+							<li>
+								<a href="#">Soy</a>
+							</li>
+							<li>
+								<a href="#">Sugar</a>
+							</li>
+							<li>
+								<a href="#">Tea Elixir Serum</a>
+							</li>
+							<li>
+								<a href="#">Vitamin Nectar</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">About</a>
+						<ul class="menu_list">
+							<li><a href="/about/">Story</a></li>
+							<li><a href="/brand/">Brands</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<div class="side_menu">
+				<div>
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+			</div>
+		</header>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const menuButton = document.querySelector('.side_menu div');
+				const navUl = document.querySelector('nav ul');
+				const body = document.body;
+
+				menuButton.addEventListener('click', function (e) {
+					navUl.classList.toggle('active');
+					e.stopPropagation(); // 메뉴 버튼 클릭 이벤트가 상위로 전파되지 않도록 방지
+				});
+
+				document.addEventListener('click', function (e) {
+					if (
+						navUl.classList.contains('active') &&
+						e.target !== navUl &&
+						!navUl.contains(e.target)
+					) {
+						navUl.classList.remove('active');
+					}
+				});
+
+				// 네비게이션 메뉴와 메뉴 버튼 클릭 시 이벤트가 document 클릭 이벤트로 전파되지 않도록 방지
+				navUl.addEventListener('click', function (e) {
+					e.stopPropagation();
+				});
+			});
+		</script>
+		<div class="container">
+			<section class="main_slide">
+				<div class="main_video">
+					<video autoplay muted>
+						<source src="img/flowers.mp4" type="" />
+					</video>
+				</div>
+				<div class="mobile_video">
+					<video autoplay muted>
+						<source src="img/videoplay_v2.mp4" type="" />
+					</video>
+				</div>
+			</section>
+			<section class="section_story sec">
+				<div class="section_wrap">
+					<div class="story_content">
+						<span>Where fresh goes, beauty follows</span>
+						<p>
+							By combining potent natural ingredients, ancient rituals,<br />
+							and modern science, fresh creates beauty products<br />
+							that perform with experiences that transform.
+						</p>
+						<div class="shop_button"><a href="#">shop now</a></div>
+					</div>
+				</div>
+			</section>
+			<script>
+				document.addEventListener('mousemove', function (e) {
+					const width = window.innerWidth;
+					const height = window.innerHeight;
+					const mouseX = e.clientX;
+					const mouseY = e.clientY;
+
+					// 마우스 위치에 따른 배경 이미지의 위치 조정 값 계산
+					const moveX = ((mouseX - width / 2) / width) * 15; // 최대 10px 이동
+					const moveY = ((mouseY - height / 2) / height) * 15; // 최대 10px 이동
+
+					// .section_story 요소 선택
+					const sectionStory = document.querySelector('.section_story');
+
+					// 부드러운 움직임을 위한 transition 설정
+					sectionStory.style.transition = 'background-position 0.3s ease';
+
+					// 배경 이미지의 위치 업데이트
+					sectionStory.style.backgroundPosition = `${80 + moveX}% ${
+						50 + moveY
+					}%`;
+				});
+				window.addEventListener('scroll', () => {
+					const storyContent = document.querySelector('.story_content');
+					const rect = storyContent.getBoundingClientRect();
+					if (rect.top < window.innerHeight) {
+						storyContent.classList.add('animate');
+					} else {
+						storyContent.classList.remove('animate'); // 선택적으로 스크롤 업 시 애니메이션 제거
+					}
+				});
+			</script>
+
+			<section class="section_best">
+				<div class="section_wrap sec">
+					<div class="best_wrap">
+						<div class="best_title">
+							<h2>Best</h2>
+							<p>
+								Check out our best-selling fresh skincare, bodycare, and
+								lifestyle products
+							</p>
+							<div class="best_button"><a href="#">shop now</a></div>
+						</div>
+						<div class="best_slide">
+							<div class="best_01">
+								<a href="#">
+									<div class="b-img">
+										<span class="hidden">블랙티 퍼밍 세럼</span>
+									</div>
+								</a>
+								<div class="txt">
+									<span>블랙티 퍼밍 세럼 100ml</span>
+									<p>￦239,000원</p>
+								</div>
+							</div>
+							<div class="best_02">
+								<a href="#">
+									<div class="b-img">
+										<span class="hidden">블랙티 퍼밍 세럼</span>
+									</div>
+								</a>
+								<div class="txt">
+									<span>블랙티 퍼밍 세럼 100ml</span>
+									<p>￦239,000원</p>
+								</div>
+							</div>
+							<div class="best_03">
+								<a href="#">
+									<div class="b-img">
+										<span class="hidden">블랙티 퍼밍 세럼</span>
+									</div>
+								</a>
+								<div class="txt">
+									<span>블랙티 퍼밍 세럼 100ml</span>
+									<p>￦239,000원</p>
+								</div>
+							</div>
+							<div class="best_04">
+								<a href="#">
+									<div class="b-img">
+										<span class="hidden">블랙티 퍼밍 세럼</span>
+									</div>
+								</a>
+								<div class="txt">
+									<span>블랙티 퍼밍 세럼 100ml</span>
+									<p>￦239,000원</p>
+								</div>
+							</div>
+							<div class="best_05">
+								<a href="#">
+									<div class="b-img">
+										<span class="hidden">블랙티 퍼밍 세럼</span>
+									</div>
+								</a>
+								<div class="txt">
+									<span>블랙티 퍼밍 세럼 100ml</span>
+									<p>￦239,000원</p>
+								</div>
+							</div>
+							<div class="best_06">
+								<a href="#">
+									<div class="b-img">
+										<span class="hidden">블랙티 퍼밍 세럼</span>
+									</div>
+								</a>
+								<div class="txt">
+									<span>블랙티 퍼밍 세럼 100ml</span>
+									<p>￦239,000원</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<script>
+				$(document).ready(function () {
+					// Slick Slider 초기화
+					$('.best_slide').slick({
+						slidesToShow: 3,
+						slidesToScroll: 1,
+						centerMode: true,
+						centerPadding: '0',
+						arrows: true,
+						responsive: [
+							{
+								breakpoint: 1024,
+								settings: {
+									slidesToShow: 3,
+									slidesToScroll: 1,
+									centerMode: true,
+									arrows: false, // 모바일에서는 화살표 비활성화
+								},
+							},
+						],
+					});
+
+					// 스크롤 이벤트 최적화
+					$(window).scroll(function () {
+						const sectionBestOffsetTop = $('.section_best').offset().top;
+						const windowHeight = $(window).height();
+						const scrollTop = $(this).scrollTop();
+
+						// 활성화 조건 변경: 섹션이 화면에 어느 정도 들어왔는지 기준으로
+						if (scrollTop + windowHeight > sectionBestOffsetTop + 100) {
+							$('.section_best').addClass('active');
+						} else {
+							$('.section_best').removeClass('active');
+						}
+					});
+				});
+			</script>
+			<section class="section_collection">
+				<div class="section_wrap">
+					<div class="collection_wrap">
+						<div class="section_title">
+							<h2>Collection</h2>
+						</div>
+						<div class="list_container">
+							<div class="list_wrap">
+								<div class="left_list swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide best_left_item active">
+											<img src="img/collection/fresh.jpg" />
+										</div>
+										<div class="swiper-slide best_left_item">
+											<img src="img/collection/fresh2.jpg" />
+										</div>
+										<div class="swiper-slide best_left_item">
+											<img src="img/collection/fresh3.jpg" />
+										</div>
+									</div>
+								</div>
+								<div class="right_list swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="rose best_item">
+												<div class="rose_01 rose_item">
+													<a href="#">
+														<img src="img/collection/rose1.jpg" alt="" />
+														<div class="txt">
+															<span>블랙티 퍼밍 세럼 100ml</span>
+															<p>￦239,000원</p>
+														</div>
+													</a>
+												</div>
+												<div class="rose_02 rose_item">
+													<a href="#">
+														<img src="img/collection/rose2.jpg" />
+
+														<div class="txt">
+															<span>블랙티 퍼밍 세럼 100ml</span>
+															<p>￦239,000원</p>
+														</div>
+													</a>
+												</div>
+												<div class="rose_03 rose_item">
+													<a href="#">
+														<img src="img/collection/rose3.jpg" />
+
+														<div class="txt">
+															<span>블랙티 퍼밍 세럼 100ml</span>
+															<p>￦239,000원</p>
+														</div>
+													</a>
+												</div>
+												<div class="rose_04 rose_item">
+													<a href="#">
+														<img src="img/collection/rose4.jpg" />
+
+														<div class="txt">
+															<span>블랙티 퍼밍 세럼 100ml</span>
+															<p>￦239,000원</p>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="blacktea best_item">
+												<div class="black_01">
+													<a href="#">
+														<img src="img/collection/black1.jpg" />
+
+														<div class="txt">
+															<span>블랙티 퍼밍 세럼 100ml</span>
+															<p>￦239,000원</p>
+														</div>
+													</a>
+												</div>
+												<div class="black_02">
+													<a href="#">
+														<img src="img/collection/black2.jpg" />
+
+														<div class="txt">
+															<span>블랙티 퍼밍 세럼 100ml</span>
+															<p>￦239,000원</p>
+														</div>
+													</a>
+												</div>
+												<div class="black_03">
+													<a href="#">
+														<img src="img/collection/black3.jpg" />
+
+														<div class="txt">
+															<span>블랙티 퍼밍 세럼 100ml</span>
+															<p>￦239,000원</p>
+														</div>
+													</a>
+												</div>
+												<div class="black_04">
+													<a href="#">
+														<img src="img/collection/black4.jpg" />
+
+														<div class="txt">
+															<span>블랙티 퍼밍 세럼 100ml</span>
+															<p>￦239,000원</p>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sugar best_item">
+												<div class="sugar_01">
+													<a href="#">
+														<img src="img/collection/sugar1.jpg" />
+
+														<div class="txt">
+															<span>블랙티 퍼밍 세럼 100ml</span>
+															<p>￦239,000원</p>
+														</div>
+													</a>
+												</div>
+												<div class="sugar_02">
+													<a href="#">
+														<img src="img/collection/sugar2.jpg" />
+
+														<div class="txt">
+															<span>블랙티 퍼밍 세럼 100ml</span>
+															<p>￦239,000원</p>
+														</div>
+													</a>
+												</div>
+												<div class="sugar_03">
+													<a href="#">
+														<img src="img/collection/sugar3.jpg" />
+
+														<div class="txt">
+															<span>블랙티 퍼밍 세럼 100ml</span>
+															<p>￦239,000원</p>
+														</div>
+													</a>
+												</div>
+												<div class="sugar_04">
+													<a href="#">
+														<img src="img/collection/sugar4.jpg" />
+
+														<div class="txt">
+															<span>블랙티 퍼밍 세럼 100ml</span>
+															<p>￦239,000원</p>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-arrow-wrap">
+										<div class="swiper-pagination"></div>
+										<div class="arrows">
+											<div class="swiper-button-prev">
+												<img src="/img/common/btn_prev.png" />
+											</div>
+											<div class="swiper-button-next">
+												<img src="/img/common/btn_next.png" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="v-txt">
+									<span>Best Collection</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<script>
+				$(document).ready(function () {
+					// 오른쪽 슬라이더 초기화
+					var mainSwiper = new Swiper('.right_list', {
+						loop: true,
+						slidesPerView: 1,
+						pagination: {
+							el: '.swiper-pagination',
+							type: 'fraction', // 페이지 번호 형식으로 변경
+							renderFraction: function (currentClass, totalClass) {
+								return (
+									'<span class="' +
+									currentClass +
+									'"></span>' +
+									' / ' + // 페이지 번호 사이에 원하는 문자 또는 마크업 추가
+									'<span class="' +
+									totalClass +
+									'"></span>'
+								);
+							},
+						},
+						navigation: {
+							nextEl: '.swiper-button-next',
+							prevEl: '.swiper-button-prev',
+						},
+					});
+
+					// 왼쪽 슬라이더 초기화
+					var leftSwiper = new Swiper('.left_list', {
+						slidesPerView: 'auto',
+						spaceBetween: 10,
+						centeredSlides: true,
+						slideToClickedSlide: true,
+					});
+
+					// 오른쪽 슬라이더 변경 시 왼쪽 슬라이더도 변경되도록 설정
+					mainSwiper.on('slideChange', function () {
+						leftSwiper.slideTo(mainSwiper.realIndex);
+					});
+
+					// 왼쪽 슬라이더 변경 시 오른쪽 슬라이더도 변경되도록 설정
+					leftSwiper.on('slideChange', function () {
+						mainSwiper.slideTo(leftSwiper.realIndex);
+					});
+				});
+			</script>
+			<section class="section_insta">
+				<div class="section_wrap">
+					<div class="insta_wrap">
+						<div class="section_title"><h2>Instagram</h2></div>
+						<div class="insta_container">
+							<div class="swiper-container instaList">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a href="#">
+											<img src="img/insta/insta01.jpg" />
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#">
+											<img src="img/insta/insta02.jpg" />
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#">
+											<img src="img/insta/insta03.jpg" />
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#">
+											<img src="img/insta/insta04.jpg" />
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#">
+											<img src="img/insta/insta05.jpg" />
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#">
+											<img src="img/insta/insta06.jpg" />
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#">
+											<img src="img/insta/insta02.jpg" />
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#">
+											<img src="img/insta/insta03.jpg" />
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#">
+											<img src="img/insta/insta04.jpg" />
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#">
+											<img src="img/insta/insta05.jpg" />
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="#">
+											<img src="img/insta/insta06.jpg" />
+										</a>
+									</div>
+								</div>
+								<!-- pagination -->
+								<div class="swiper-pagination"></div>
+
+								<!-- scrollbar -->
+								<div class="swiper-scrollbar"></div>
+
+								<!-- buttons -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<script>
+				var $swiperSelector = $('.instaList.swiper-container');
+
+				$swiperSelector.each(function (index) {
+					var $this = $(this);
+					$this.addClass('swiper-slider-' + index);
+
+					var dragSize = $this.data('drag-size') ? $this.data('drag-size') : 50;
+					var freeMode = $this.data('free-mode')
+						? $this.data('free-mode')
+						: false;
+					var loop = $this.data('loop') ? $this.data('loop') : false;
+					var slidesDesktop = $this.data('slides-desktop')
+						? $this.data('slides-desktop')
+						: 4;
+					var slidesTablet = $this.data('slides-tablet')
+						? $this.data('slides-tablet')
+						: 3;
+					var slidesMobile = $this.data('slides-mobile')
+						? $this.data('slides-mobile')
+						: 2.5;
+					var spaceBetween = $this.data('space-between')
+						? $this.data('space-between')
+						: 20;
+
+					var swiper = new Swiper('.swiper-slider-' + index, {
+						direction: 'horizontal',
+						loop: loop,
+						freeMode: freeMode,
+						spaceBetween: spaceBetween,
+						breakpoints: {
+							1920: {
+								slidesPerView: 5,
+							},
+							992: {
+								slidesPerView: slidesTablet,
+							},
+							320: {
+								slidesPerView: slidesMobile,
+							},
+						},
+
+						scrollbar: {
+							el: '.swiper-scrollbar',
+							draggable: true,
+							dragSize: 200,
+						},
+					});
+				});
+			</script>
+		</div>
+		<footer>
+			<div class="foot-wrap sec-wrap">
+				<div class="foot-in">
+					<div class="logo">
+						<a href="#"><span class="hidden">fresh</span></a>
+					</div>
+					<div class="about">
+						<p>ABOUT FRESH</p>
+						<a href="#"><span>about</span></a>
+					</div>
+					<div class="customer">
+						<p>CUSTOMER SERVICE</p>
+						<ul>
+							<li>
+								<a href="#"><span>Q&A</span></a>
+							</li>
+							<li>
+								<a href="#"><span>FAQ</span></a>
+							</li>
+							<li>
+								<a href="#"><span>Contact</span></a>
+							</li>
+							<li>
+								<a href="#"><span>Policies</span></a>
+							</li>
+						</ul>
+					</div>
+					<div class="sns">
+						<p>FOLLOW US</p>
+						<div class="sns_list">
+							<a href="#" class="fb"><span class="hidden">페이스북</span></a>
+							<a href="#" class="tw"><span class="hidden">트위터</span></a>
+							<a href="#" class="in"><span class="hidden">인스타그램</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

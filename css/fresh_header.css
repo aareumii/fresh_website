@@ -1,0 +1,130 @@
+header {
+	background-color: #f8f8f8;
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: fixed; /* 헤더를 상단에 고정 */
+	width: 100%; /* 전체 너비 */
+	top: 0; /* 상단에 위치 */
+	left: 0; /* 왼쪽 정렬 */
+	z-index: 1000; /* 다른 요소들 위에 표시되도록 z-index 설정 */
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		padding: 25px 0;
+	}
+
+	h1 {
+		font-size: 24px;
+
+		z-index: 101;
+		@media (max-width: 768px) {
+			position: absolute;
+			top: 10px;
+			left: 20px;
+		}
+	}
+
+	nav {
+		z-index: 100;
+		text-align: center;
+
+		ul {
+			display: flex;
+			justify-content: center;
+			padding: 10px 0;
+
+			@media (max-width: 768px) {
+				flex-direction: column;
+				transform: translateY(-100%);
+				transition: transform 0.5s ease-in-out;
+				background-color: #f8f8f8;
+				position: fixed;
+				width: 100%;
+
+				left: 0;
+				&.active {
+					transform: translateY(0);
+				}
+			}
+
+			li {
+				position: relative;
+				margin: 0 15px;
+
+				@media (max-width: 768px) {
+					margin: 5px 0;
+				}
+
+				a {
+					color: #333;
+					padding: 10px 15px;
+					display: block;
+
+					&:hover {
+						background-color: #ddd;
+					}
+				}
+
+				/* 모바일 환경에서 2단계 메뉴 숨김 처리 */
+				.menu_list {
+					display: none;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					background-color: #fff;
+					box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+					padding: 10px 0;
+
+					@media (max-width: 768px) {
+						display: none !important; /* 모바일에서는 2단계 메뉴를 항상 숨김 */
+					}
+
+					li {
+						clear: both;
+
+						a {
+							padding: 8px 20px;
+							color: #666;
+							display: block;
+
+							&:hover {
+								background-color: #eee;
+							}
+						}
+					}
+				}
+
+				&:hover .menu_list,
+				&:focus-within .menu_list {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.side_menu {
+		z-index: 101;
+		@media (max-width: 768px) {
+			display: block;
+			position: absolute;
+			top: 10px;
+			right: 20px;
+		}
+
+		div {
+			cursor: pointer;
+
+			.bar1,
+			.bar2,
+			.bar3 {
+				width: 25px;
+				height: 3px;
+				background-color: #333;
+				margin: 5px 0;
+				transition: 0.4s;
+			}
+		}
+	}
+}

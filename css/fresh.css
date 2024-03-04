@@ -1,0 +1,62 @@
+/* 전역 스타일 설정 */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	font-family: 'Merriweather', 'Noto Sans KR', sans-serif;
+	background-color: #f7f5ec;
+}
+
+video {
+	width: 100%;
+	overflow: hidden;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #151515;
+}
+
+.hidden {
+	display: none;
+}
+
+/* 섹션 기본 스타일 */
+.sec {
+	width: 100%;
+	height: 60vw; /* 높이가 화면 너비에 비례하도록 설정 */
+}
+
+/* 섹션 래퍼 스타일 */
+.section_wrap {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0 20px; /* 양쪽에 패딩 추가 */
+
+	@media (max-width: 1024px) {
+		max-width: 1024px;
+		width: 100%;
+	}
+
+	@media (max-width: 768px) {
+		max-width: 750px;
+		width: 100%;
+	}
+
+	@media (max-width: 480px) {
+		max-width: 100%;
+		padding: 0 15px; /* 더 작은 화면에서 패딩 조정 */
+	}
+}
+
+/* 추가 반응형 스타일링이 필요한 요소가 있다면 여기에 추가합니다. */

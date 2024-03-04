@@ -1,0 +1,87 @@
+footer {
+	width: 100%;
+	padding: 100px 0;
+	background-color: #c4c2ba;
+	color: #000;
+	position: relative;
+
+	.foot-in {
+		display: flex;
+		justify-content: space-around;
+		text-align: center;
+		line-height: 2.2rem;
+	}
+
+	.logo {
+		display: inline-block;
+		width: 130px;
+		height: 100px;
+		background: url(../img/footer/freshlogo_w.png) no-repeat center / contain;
+	}
+
+	.sns {
+		display: flex;
+		flex-direction: column;
+		width: 20%;
+		p {
+			color: #303e48;
+			font-weight: bold;
+		}
+	}
+	.sns_list {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		a {
+			margin-top: 50px;
+			width: 55px;
+			height: 55px;
+			background: url(../img/footer/fb.png) no-repeat 0 / 100%;
+
+			&.in {
+				background-image: url(../img/footer/instagram.png);
+			}
+
+			&.tw {
+				background-image: url(../img/footer/tw.png);
+			}
+		}
+	}
+
+	.about,
+	.customer {
+		p {
+			font-weight: bold;
+			color: #303e48;
+		}
+		span {
+			color: #303e48;
+			font-size: 15px;
+			font-weight: 100;
+			line-height: 1.6rem;
+		}
+	}
+
+	/* .slick-track {
+		width: 100%;
+	}
+
+	.insta-mid {
+		width: 45%;
+	}
+
+	.insta-right {
+		width: 5%;
+	} */
+}
+
+@media (max-width: 768px) {
+	footer {
+		.foot-in {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}

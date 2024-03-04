@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+/*noto-sans*/
+@font-face {
+	font-family: 'noto-sans';
+	font-weight: 100;
+	src: url(../font/noto/NotoSansKR-Thin.woff) format('woff');
+}
+@font-face {
+	font-family: 'noto-sans';
+	font-weight: 200;
+	src: url(../font/noto/NotoSansKR-Light.woff) format('woff');
+}
+@font-face {
+	font-family: 'noto-sans';
+	font-weight: 300;
+	src: url(../font/noto/NotoSansKR-Regular.woff) format('woff');
+}
+@font-face {
+	font-family: 'noto-sans';
+	font-weight: 400;
+	src: url(../font/noto/NotoSansKR-Medium.woff) format('woff');
+}
+@font-face {
+	font-family: 'noto-sans';
+	font-weight: 500;
+	src: url(../font/noto/NotoSansKR-Bold.woff) format('woff');
+}
+@font-face {
+	font-family: 'noto-sans';
+	font-weight: 600;
+	src: url(../font/noto/NotoSansKR-Black.woff) format('woff');
+}
+/*Merriweather*/
+@font-face {
+	font-family: 'Merriweather';
+	font-weight: 700;
+	src: url(../font/Merriweather/Merriweather-Bold.woff) format('woff');
+}
+@font-face {
+	font-family: 'Merriweather';
+	font-weight: 400;
+	src: url(../font/Merriweather/Merriweather-Regular.woff) format('woff');
+}
+@font-face {
+	font-family: 'Merriweather';
+	font-weight: 300;
+	src: url(../font/Merriweather/Merriweather-Light.woff) format('woff');
+}
+
+@media (max-width: 1200px) {
+	/*모바일용*/
+	html {
+		font-size: 12px;
+	}
+}
+
+@media (min-width: 1200px) {
+	/*pc용*/
+	html {
+		font-size: 18px;
+	}
+}
+
+body {
+	font-family: 'Merriweather', 'Noto Sans KR', sans-serif;
+}
+h2 {
+	font-family: 'Merriweather', sans-serif;
+	font-weight: 400;
+	font-size: 4.1rem;
+}
+h3 {
+	font-family: 'Merriweather', sans-serif;
+	font-size: 1.3rem;
+	font-weight: 400;
+}
+span {
+	font-family: 'Merriweather', sans-serif;
+	font-weight: 400;
+}
+p {
+	font-family: 'Merriweather', sans-serif;
+	font-weight: 300;
+	/*font-size: 1rem;*/
+	line-height: 1.6;
+}
+button span {
+	font-family: 'Merriweather', sans-serif;
+	font-weight: 300;
+	/*font-size: 1rem;*/
+	color: #fff;
+	text-indent: 0.8rem;
+	display: inline-block;
+	opacity: 1;
+	transform: none;
+}
+.menu li span {
+	font-family: 'Merriweather', sans-serif;
+	font-weight: 300;
+}
+#scroller span {
+	font-family: 'Merriweather', sans-serif;
+	font-weight: 300;
+}
