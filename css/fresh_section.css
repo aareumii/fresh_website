@@ -164,7 +164,7 @@
 	background-size: contain !important; /* 이미지 크기에 따라 조정 */
 	position: absolute;
 	left: -15% !important;
-	top: 300px !important;
+	top: 350px !important;
 }
 
 /* 오른쪽 화살표 스타일 변경 */
@@ -173,7 +173,7 @@
 	background-repeat: no-repeat !important;
 	background-size: contain !important; /* 이미지 크기에 따라 조정 */
 	left: -5% !important;
-	top: 300px !important;
+	top: 350px !important;
 }
 .slick-slide {
 	margin-left: 10px;
